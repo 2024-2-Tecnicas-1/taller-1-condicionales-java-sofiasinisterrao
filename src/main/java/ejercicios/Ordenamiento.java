@@ -11,7 +11,23 @@ import java.util.Scanner;
 public class Ordenamiento {
     public static String evaluar(int numero1, int numero2, int numero3, int numero4) {
         // TODO: Coloca aquí el código del ejercicio 5: Ordenamiento
-        return "";
+        int a = numero1;
+        int b = numero2;
+        int c = numero3;
+        int d = numero4;
+        int temp;
+
+        // Comparar e intercambiar números para ordenar
+        if (a > b) { temp = a; a = b; b = temp; }
+        if (a > c) { temp = a; a = c; c = temp; }
+        if (a > d) { temp = a; a = d; d = temp; }
+        if (b > c) { temp = b; b = c; c = temp; }
+        if (b > d) { temp = b; b = d; d = temp; }
+        if (c > d) { temp = c; c = d; d = temp; }
+
+        // Construir la cadena de salida con los números ordenados
+        return a + " " + b + " " + c + " " + d;
+    
     }
     
     public static void main(String[] args) {
