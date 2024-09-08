@@ -1,15 +1,16 @@
 package ejercicios;
 
-import static ejercicios.SetDeTenis.evaluar;
 import java.util.Scanner;
 
 /**
- *
- * @author danielsanchez
+ * Programa para clasificar un triángulo basado en la longitud de sus lados.
+ * 
+ * @autor danielsanchez
  */
 public class Triangulo {
+    
     public static String evaluar(double a, double b, double c) {
-        // TODO: Coloca aquí el código del ejercicio 7: Triángulos
+        // Verificar si los lados cumplen con la desigualdad triangular
         if (a + b <= c || a + c <= b || b + c <= a) {
             return "No es un triángulo válido";
         }
@@ -26,14 +27,18 @@ public class Triangulo {
     
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
-        System.out.print("a:");
+        
+        // Solicitar la longitud de los lados del triángulo
+        System.out.print("a: ");
         double a = lector.nextDouble();
-        System.out.print("b:");
+        System.out.print("b: ");
         double b = lector.nextDouble();
-        System.out.print("c:");
+        System.out.print("c: ");
         double c = lector.nextDouble();
         
+        // Evaluar y mostrar el tipo de triángulo
         String respuesta = evaluar(a, b, c);
         System.out.println(respuesta);
+        // Cerrar el Scanner
+        lector.close();
     }
-}

@@ -8,6 +8,7 @@ import java.util.Scanner;
  */
 public class SetDeTenis {
     public static String evaluar(int numVictoriasA, int numVictoriasB) {
+        
         // TODO: Coloca aquí el código del ejercicio 1: Set de tenis
         if (numVictoriasA >= 7 && numVictoriasB <= 5 && numVictoriasA - numVictoriasB >= 2) {
             return "Ganó A";
@@ -35,7 +36,6 @@ public class SetDeTenis {
             (Math.abs(numVictoriasA - numVictoriasB) > 2)) {
             return "Inválido";
         }
-        return "";
     }
     
     public static void main(String[] args) {
