@@ -1,7 +1,6 @@
 
 package ejercicios;
 
-import static ejercicios.SetDeTenis.evaluar;
 import java.util.Scanner;
 
 /**
@@ -11,7 +10,20 @@ import java.util.Scanner;
 public class AnnosBisiestos {
     public static String evaluar(int anno){
         // TODO: Coloca aquí el código del ejercicio 2: Años bisiestos
-        return "";
+        if (anno % 4 == 0) {
+            if (anno % 100 == 0) {
+               if (anno % 400 == 0) {
+                return anno + " es un año bisiesto";
+               }else{
+                return anno + " no es un año bisiesto.";    
+            }
+          } else {
+            return anno + " es un año bisiesto.";     
+        }
+         } else {
+        return anno + " no es año bisiesto.";
+    }
+
     }
     
     public static void main(String[] args) {
